@@ -1,32 +1,37 @@
 function findNeedle(haystack) {
     let result = []
-    // haystack.forEach(function (item, index) {
-    //   if (item.indexOf('N') != -1) {
-    //     result.push(index, item.indexOf('N'));
-    //   }
-    //   });
-    for (eachThing in haystack) {
-      console.log('the index is' + eachThing)
-      console.log('the element is' + haystack[eachThing])
-    }
-    return result
-  };
-  
+    haystack.forEach(function (item, index) {
+      if (item.indexOf('N') != -1) {
+        result.push(index, item.indexOf('N'));
+      }
+    
+      });
+      return result
+    };  
   const haystack = [
     ['H', 'H', 'H', 'H'],
     ['H', 'H', 'N', 'H'],
     ['H', 'H', 'H', 'H']
   ];
   
-  findNeedle(haystack)
+  console.log(findNeedle(haystack))
   
   // Don't change this
   module.exports = {
     findNeedle,
   };
-  // can you see terminal?
-  // it finds the N but idk what most sensible way to print answer is/access it
-  
+
+
+
+      //alex code below
+//     for (eachThing in haystack) {
+//       console.log('the index is' + eachThing)
+//       console.log('the element is' + haystack[eachThing])
+//     }
+//     return result
+//   };
+//end alex code
+
       // console.log(item.indexOf('N'));
       // console.log(item.indexOf('N')); 
   
