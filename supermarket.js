@@ -52,31 +52,25 @@
 // the last customer at till2 is served.
 
 
-
 // Returns the queue time for all customers given number of tills
 function queueTime(customers, n) {
-    let newCust = []
     let tills = []
     let smaller = Math.min(...tills)
     let time = 0
-    //array with two indexes values of which represent time /items being processed by tills
     for (var i = 1; i<= n; i++) {
         tills.push(0)
     }
-    //works through line of customers taking first from each
-    //smaller has to be redefined at beginning of loop otherwise it keeps allocating to the original 'smaller'
-    //removes each customer as it is removed
-    //re define time at end of loop to update time
     while (customers.length > 0) {
         smaller = Math.min(...tills)
         let replace = tills.indexOf(smaller)
         tills[replace] += customers[0]
-        newCust = customers.splice(0,1)    
+        customers.splice(0,1)    
         time = Math.max(...tills) 
     }  
     console.log(tills)
     return time
 }
 
-console.log(queueTime([],5))
+console.log(queueTime([6,4,1,2,3,4],5))
 module.exports = {queueTime}
+
