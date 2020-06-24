@@ -1,3 +1,4 @@
+
 function toPigLatin(phrase) {
     let words = phrase.split(" ")
     let newWord = ""
