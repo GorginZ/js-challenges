@@ -16,7 +16,7 @@ function ultimateFizzBuzz(stringOne, stringTwo, numOne, numTwo) {
       });
   return myArr
   }
-  console.log(ultimateFizzBuzz("HELLO","Buzz",3,5));
+  console.log(ultimateFizzBuzz("fizz","Buzz",3,5));
   
   // Don't Change This
   module.exports = {
